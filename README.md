@@ -19,7 +19,7 @@ graph TD
     end
 
     subgraph "Audit & Monitoring"
-        LedgerCore -->|@Auditable| AuditDB[(Audit Log)]
+        LedgerCore -->|Auditable| AuditDB[(Audit Log)]
         Prometheus -->|Scrape| LedgerCore
         Grafana -->|Query| Prometheus
     end
